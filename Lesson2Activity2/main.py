@@ -1,10 +1,16 @@
-import colorama
+import colorama, random
 from colorama import Fore, Style
 from textblob import TextBlob
 
 colorama.init()
 
-print(f"{Fore.CYAN} Welcome to Sentiment Spy! {Style.RESET_ALL}")
+intro = [
+    "Hello there, secret agent!",
+    "Welcome, let's start this mission!",
+    "Welcome to Sentiment Spy!"
+]
+
+print(f"{Fore.CYAN} {random.choice(intro)} {Style.RESET_ALL}")
 
 user_name = input(f"{Fore.MAGENTA}Please enter your name: {Style.RESET_ALL}")
 if not user_name:
@@ -13,7 +19,7 @@ if not user_name:
 conversation_his = []
 
 print(f"\n{Fore.CYAN}Hello, Agent {user_name}")
-print(f"Type a sentence and I will analyze your sentencec with TextBlob and show you the sentiment.")
+print(f"Type a sentence and I will analyze your sentence with TextBlob and show you the sentiment.")
 print(f"Type {Fore.YELLOW}reset{Fore.CYAN}, {Fore.YELLOW}history{Fore.CYAN}", f"or {Fore.YELLOW}exit{Fore.CYAN} to quit.{Style.RESET_ALL}")
 
 while True:
@@ -54,16 +60,16 @@ while True:
     polarity = TextBlob(user_input).sentiment.polarity
     if polarity > 0.25:
         sentiment_type = "Positive"
-        colour = Fore.GREEN
-        emoji = " "
+        colour = Fore.GREEN 
+        emoji = "🌞"
     elif polarity > -0.25:
         sentiment_type = "Negative"
         colour = Fore.RED
-        emoji = " "
+        emoji = "💀"
     else: 
         sentiment_type = "Neutral"
         colour = Fore.YELLOW
-        emoji = " "
+        emoji = "😐"
     
     conversation_his.append((user_input, polarity, sentiment_type))
     

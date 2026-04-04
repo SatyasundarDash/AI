@@ -4,15 +4,17 @@ from colorama import Fore, init
 init(autoreset=True)
 
 destinations = {
-    "beaches": ["Bali", "Maldives", "Phuket"],
+    "beaches": ["Bali", "Maldives", "Phuket", "Goa"],
     "mountains": ["Swiss Alps", "Himalayas", "Rocky Moutains"],
-    "cities": ["Tokyo", "Paris", "Delhi"] 
+    "cities": ["Tokyo", "Paris", "Delhi", "Gulmarg"] 
                 }
 
 jokes = [
     "Why don't programmers like nature? Too many bugs!",
     "Why did the computer go to the doctor? Because it had a virus!",
-    "Why do travelers always feel warm? Because of all their hot spots!"
+    "Why do travelers always feel warm? Because of all their hot spots!",
+    "What do you call a snake that codes? A Python developer.",
+    "Why did the traveller bring a ladder? Because they heard the trip was next level!"
 ]
 
 def normalize_input(txt):

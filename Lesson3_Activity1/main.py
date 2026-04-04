@@ -66,7 +66,7 @@ def chat():
     print(Fore.GREEN + f"Nice to meet you, {name}!")
 
     help()
-
+    
     while True:
         user_input = input(Fore.YELLOW + f"{name}:")
         user_input = normalize_input(user_input)

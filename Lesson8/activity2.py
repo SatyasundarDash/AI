@@ -17,7 +17,7 @@ plt.imshow(rotated_rgb)
 plt.title("Rotated image")
 plt.show()
 
-# brightness 
+# to increase brightness 
 brightness_matrix = np.ones(img.shape, dtype="uint8") * 50
 brighter = cv2.add(img, brightness_matrix)
 

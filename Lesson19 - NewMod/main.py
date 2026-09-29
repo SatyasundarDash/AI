@@ -5,6 +5,14 @@ url = "https://official-joke-api.appspot.com/random_joke"
 running = True
 # send GET req
 
+
+# req codes: 
+"""
+    200 = Successful!
+    404 = Data not found.
+    500 = Server side errors.
+
+"""
 while running:
     response = requests.get(url)
 
@@ -18,7 +26,7 @@ while running:
     a = input("Do you want another joke? (y/n)")
     if (a != "y"):
         break
-    
+
 
 
 

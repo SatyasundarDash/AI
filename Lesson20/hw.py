@@ -1,4 +1,3 @@
-
 import requests
 
 def fetchFact(url: str) -> str:
